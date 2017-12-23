@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   $("#playStopAudio").html("Play Radiosai Bhajan Stream");
-  $("#audioControl").hide();
+  $("#audioControl").show();
   $( "#download" ).click(function() {
 	var dateObj = new Date($("#date").val);
 	var date = $('#date').val().split("-");
@@ -12,13 +12,20 @@ var option = $("#option").val();
   var month = date[1];
  var  year = date[0];
  console.log(day);
+ var url;
+ if(option ==='AM'){
+ 
+	 var urlFinalPart = "_AM_BHAJAN.mp3";
+	 var underScore="_"
+	 url=urlFirstPart+year+underScore+month+underScore+day+urlFinalPart;
+ }
+ else{
 	var urlFinalPart = "_PM_BHAJAN.mp3";
-	var secondUrl = "_AM_BHAJAN.mp3";
 	var underScore="_"
-	var url=urlFirstPart+year+underScore+month+underScore+day+urlFinalPart;
-	var url2=urlFirstPart+year+underScore+month+underScore+day+secondUrl;
+	url=urlFirstPart+year+underScore+month+underScore+day+urlFinalPart;
+ }
 	window.location.href = url;
-	window.location.href= url2;
+
 
  
 });

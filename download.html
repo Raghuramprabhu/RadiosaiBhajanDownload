@@ -1,22 +1,61 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script src="jquery.min.js"></script>
-<script src="myjs.js"></script>
+  <title>Love All Serve All</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="myjs.js"></script>
+  <style>
+ body{
+    background-color: #809fff;
+}
+.btn:hover {
+
+	
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+  </style>
+
 </head>
-<body>
-  <input type="date" id="date">
-  <select id="option"> 
-  <option value="AM">AM</option>
-  <option value="PM">PM</option>
-</select>
-	<button id ="download">Download</button>
-	<button id="playBhajanControl" class="play"><span id ="playStopAudio"></span></button>
-	<div id="audioControl">
-	<div id="livebhajan">
-	<audio controls  autoplay="false" name="media" id="audioSoure"><source src="" type="audio/mpeg"></audio>
+<body bgcolor="black">
+<div class="container">
+   <div class="row">
+  <h2>Download Live Bhajans from Radiosai Global Harmony</h2>
 	</div>
+	<div class="row">
+	
+
+    <div class="form-group ">
+		
+      <label for="into">Please select a date atleast 2 days before today:</label>
+	 
+	  
+      <input type="date" class="form-control" id="date" placeholder="" name="date">
+	<select class="form-control" id="option">
+		<option>AM</option>
+		<option>PM</option>
+  </select>
+
+	
+	  
+    </div>
+    <div class="form-group">
+      <button id ="download" class="btn">Download Bhajan</button>
+    </div>
+   <div class="form-group">
+		<div id="audioControl">
+			<div id="livebhajan">			
+				<button id ="playBhajanControl" class="play btn btn-primary"><span id ="playStopAudio"></span></button>
+			</div>
+		</div>
 	</div>
+   
+  
+</div>
+ 
 </body>
 </html>
-
-
