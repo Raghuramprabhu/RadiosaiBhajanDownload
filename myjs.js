@@ -1,5 +1,6 @@
 $( document ).ready(function() {
   $("#playStopAudio").html("Play Radiosai Bhajan Stream");
+  
   $("#audioControl").show();
   $( "#download" ).click(function() {
 	var dateObj = new Date($("#date").val);
@@ -47,6 +48,26 @@ $("#playBhajanControl").click(function(){
 			$(this).html("Play Radiosai Bhajan Stream");
 		}
 		
+});
+$("#synchGoldenWords").click(function(){
+	var newMessage = $("#goldenWords").val();
+	alert(newMessage);
+	var obj = {
+	"date":"date",
+    "msg": newMessage
+};
+var data = JSON.stringify(obj);
+
+ $.ajax({
+    url:"https://api.myjson.com/bins/:id",
+    type:"PUT",
+    data:'{"msg":newMessage}',
+    contentType:"application/json; charset=utf-8",
+    dataType:"json",
+    success: function(data, textStatus, jqXHR){
+
+    }
+});
 });
 });
 
